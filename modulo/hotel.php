@@ -9,7 +9,5 @@ class Hotel
   public $fecha;
   public $disponibilidad;
 
-  public function __construct() {
-    
-  }
+  public function __construct() { }
 }
