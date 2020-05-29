@@ -1,0 +1,125 @@
+<div class="container">
+    <div id="formulario-contenerdor">
+      <form id="formularioRegistroHotel" method="post" name="test" action="./php/registrarHotel.php">
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-sm">
+              <label class="texto-mediano">
+                <strong>
+                  Nombre del hotel
+                </strong>
+                <span style="color:red;">
+                  *
+                </span>
+              </label>
+              <input class="form-control" name="nombre" placeholder="Digite el nombre de la empresa.." type="text"/>
+              <br/>
+            </div>
+            <div class="col-sm">
+              <label class="texto-mediano">
+                <strong>
+                  Email
+                </strong>
+                <span style="color:red;">
+                  *
+                </span>
+              </label>
+              <input class="form-control" name="email" placeholder="Digite email aqui..." type="email"/>
+              <br/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-sm">
+              <label class="texto-mediano">
+                <strong>
+                  Celular
+                </strong>
+                <span style="color:red;">
+                  *
+                </span>
+              </label>
+              <input class="form-control" name="celular" placeholder="Digite el celular aqui..." type="number"/>
+              <br/>
+            </div>
+            <div class="col-sm">
+              <label class="texto-mediano">
+                <strong>
+                  Lugar
+                </strong>
+                <span style="color:red;">
+                  *
+                </span>
+              </label>
+              <input class="form-control" name="lugar" placeholder="Digite el lugar aqui..." type="text"/>
+              <br/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-sm">
+              <label class="texto-mediano">
+                <strong>
+                  Fecha
+                </strong>
+                <span style="color:red;">
+                  *
+                </span>
+              </label>
+              <input aria-describedby="emailHelp" class="form-control" name="fecha"  type="date"/>
+              <br/>
+            </div>
+            <div class="col-sm">
+              <label class="texto-mediano">
+                <strong>
+                  Disponibilidad
+                </strong>
+                <span style="color:red;">
+                  *
+                </span>
+              </label>
+              <select class="form-control" name="disponibilidad">
+                <option>BARRANQUILLA</option>
+                <option>BOGOTA</option>
+                <option>CESAR</option>
+              </select>
+              <br/>
+            </div>
+          </div>
+          <br/>
+        </div>
+        <div class="respuestaRegistroHotel" id="resultRegistrarProveedor"></div>
+        <div class="text-center">
+          <input id="btnEnviarHotel" name="btnEnviarHotel" class="btn btn-warning boton-mediano" style="border: 1px solid #000;" type="submit" value=" Registrar convenio">
+          </input>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <br/>
+  <script>
+    $(document).ready(function () {
+        $("#formularioRegistroHotel").bind("submit",function(){
+            var btnEnviar = $("#btnEnviarHotel");
+            $.ajax({
+                type: $(this).attr("method"),
+                url: $(this).attr("action"),
+                data:$(this).serialize(),
+                beforeSend: function(){
+                    btnEnviar.val("Enviando");
+                    btnEnviar.attr("disabled","disabled");
+                },
+                complete:function(data){
+                    btnEnviar.val("Registrar empresa");
+                    btnEnviar.removeAttr("disabled");
+                },
+                success: function(data){
+                    $(".respuestaRegistroHotel").html(data);
+                },
+                error: function(data){
+                    alert("Problemas al tratar de enviar el formulario");
+                }
+            });
+            return false;
+        });
+    });
+  </script>

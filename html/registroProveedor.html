@@ -1,0 +1,146 @@
+<br/>
+<div class="container">
+  <div id="formulario-contenerdor">
+    <form id="formularioRegistroProveedor" method="post" name="test" action="./php/registrarProveedor.php">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Nombre
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="primerNombre" placeholder="Tu primer nombre aqui..." type="text"/>
+            <br/>
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+              Segundo nombre
+              </strong>
+            </label>
+            <input class="form-control" name="segundoNombre" placeholder="Tu segundo nombre aqui..." type="text"/>
+            <br/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Primer apellido
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="primerApellido" placeholder="Tu primer apellido aqui..." type="text"/>
+            <br/>
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Segundo apellido
+              </strong>
+            </label>
+            <input class="form-control" name="segundoApellido" placeholder="Tu segundo apellido aqui..." type="text"/>
+            <br/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Tipo de documento
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="tipoIdentificacion">
+              <option>CC</option>
+              <option>TI</option>
+              <option>NIFT</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Identificación
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" min="1" name="identificacion" placeholder="Digite su identifiacion aqui..." type="number"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Disponibilidad
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>CESAR</option>
+              <option>BOGOTA</option>
+              <option>BARRANQUILLA</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Cantidad
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="cantidad" placeholder="La cantidad aqui.." type="number"/>
+            <br/>
+          </div>
+        </div>
+        <br/>
+      </div>
+      <div class="respuesta" id="resultRegistrarProveedor"></div>
+      <div class="text-center">
+        <input id="btnEnviar" name="btnEnviarProveedor" class="btn btn-warning boton-mediano" style="border: 1px solid #000;" type="submit" value=" Registrar proveedor">
+        </input>
+      </div>
+    </form>
+  </div>
+</div>
+<br/>
+<script>
+  $(document).ready(function () {
+      $("#formularioRegistroProveedor").bind("submit",function(){
+          var btnEnviar = $("#btnEnviarProveedor");
+          $.ajax({
+              type: $(this).attr("method"),
+              url: $(this).attr("action"),
+              data:$(this).serialize(),
+              beforeSend: function(){
+                  btnEnviar.val("Enviando");
+                  btnEnviar.attr("disabled","disabled");
+              },
+              complete:function(data){
+                  btnEnviar.val("Registrar proveedor");
+                  btnEnviar.removeAttr("disabled");
+              },
+              success: function(data){
+                  $(".respuesta").html(data);
+              },
+              error: function(data){
+                  alert("Problemas al tratar de enviar el formulario");
+              }
+          });
+          return false;
+      });
+  });
+</script>
