@@ -1,0 +1,186 @@
+<div class="container">
+  <div id="formulario-contenerdor">
+    <form id="formularioRegistroHotel" method="post" name="test" action="./php/registrarHotel.php">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Nombre del solicitante
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="Nombre" placeholder="Digite el nombre aqui..." type="text" />
+            <br />
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Nombre de la empresa
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="Nombrempresa" placeholder="Digite el nombre aqui..." type="text" />
+            <br />
+          </div>
+        </div>
+        <div class="col-sm">
+          <label class="texto-mediano">
+            <strong>
+              Cargo
+            </strong>
+          </label>
+          <input class="form-control" name="cargo" placeholder="Digite el cargo aqui..." type="text" />
+          <br />
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Fecha
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="fecha_movilidad" type="date" />
+            <br />
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Lugar
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="lugar" placeholder="Digite el lugar aqui..." type="text" />
+            <br />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Email
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="email" placeholder="Digite email aqui..." type="email" />
+            <br />
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Requerimiento
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>TALLER</option>
+              <option>SEMINARIO</option>
+              <option>CONGRESO</option>
+            </select>
+            <br />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Descripcion del Requerimiento
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="Descripcion" placeholder="Digite descripcion aqui..." type="text" />
+            <br />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Refrigerio
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="Refrigerio" placeholder="" type="number" />
+            <br />
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Ponentes
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="Ponentes" placeholder="" type="number" />
+            <br />
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Logistica completa
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="Logistica" placeholder="" type="number" />
+            <br />
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Especifique
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="Especifique" placeholder="Detalle aqui..." type="text" />
+            <br />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Observación
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="Observacion" placeholder="Observe aqui..." type="text" />
+            <br />
+          </div>
+        </div>
+        <br />
+      </div>
+      <div class="respuestaRegistroMovilidad"></div>
+      <div class="text-center">
+        <input id="btnEnviarMovildad" name="btnEnviarMovildad" class="btn btn-warning boton-mediano"
+          style="border: 1px solid #000;" type="submit" value=" Registrar ">
+        </input>
+      </div>
+    </form>
+  </div>
+</div>
+<br />
+<script src="registrartaller.js"></script>

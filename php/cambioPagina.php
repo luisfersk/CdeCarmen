@@ -1,4 +1,4 @@
 <?php
 $nombrePagina = $_POST['pagina'];
 
-require $nombrePagina;
+require_once '../'.$nombrePagina;

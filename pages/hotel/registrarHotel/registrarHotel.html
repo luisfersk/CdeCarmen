@@ -1,0 +1,106 @@
+<div class="container">
+  <div id="formulario-contenerdor">
+    <form id="formularioRegistroHotel" method="post" name="test" action="registrarHotel.php">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Codigo
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" min="1" name="codigo" placeholder="Digite el codigo aqui..." type="number" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Nombre del hotel
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="nombre" placeholder="Digite el nombre de el hotel.." type="text" />
+            <br />
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Email
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="email" placeholder="Digite Email aqui..." type="email" />
+            <br />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Telefono
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="Telefono" placeholder="Digite el telefono aqui..." type="text" />
+            <br />
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Direccion
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="direccion" placeholder="Digite la direccion aqui..." type="text" />
+            <br />
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Lugar
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="lugar" placeholder="Digite el lugar aqui..." type="text" />
+            <br />
+          </div>
+        </div>
+        <div class="col-sm">
+          <label class="texto-mediano">
+            <strong>
+              NOTA
+            </strong>
+            <span style="color:red;">
+              *
+            </span>
+          </label>
+          <input class="form-control" name="nota" placeholder="Descripcion aqui..." type="text" />
+          <br />
+        </div>
+        <br />
+      </div>
+      <div class="respuestaRegistroHotel" id="resultRegistrarProveedor"></div>
+      <div class="text-center">
+        <input id="btnEnviarHotel" name="btnEnviarHotel" class="btn btn-warning boton-mediano"
+          style="border: 1px solid #000;" type="submit" value=" Registrar ">
+        </input>
+      </div>
+    </form>
+  </div>
+</div>
+<br />
+<script src="registrarHotel.js"></script>
