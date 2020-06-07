@@ -19,9 +19,9 @@
 <table id="example" class="table table-striped table-bordered" style="width:100%">
     <thead>
         <tr>
-            <th>Tipo de documento</th>
-            <th>Identificacion</th>
-            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Nombre del hotel</th>
+            <th>Email</th>
             <th>Telefono</th>
             <th>Direccion</th>
             <th>Lugar</th>
@@ -41,7 +41,7 @@
   function buscar() {
     var textoBusqueda = $("input#busqueda").val();
     if (textoBusqueda != "") {
-      $.post("./php/consultarProveedor.php", {valorBusqueda: textoBusqueda}, function(mensaje) {
+      $.post("./php/consultarHotel.php", {valorBusqueda: textoBusqueda}, function(mensaje) {
         $("#resultadoBusqueda").html(mensaje);
       }); 
     } else { 

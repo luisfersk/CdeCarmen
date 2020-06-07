@@ -6,20 +6,20 @@
           <div class="col-sm">
             <label class="texto-mediano">
               <strong>
-                Codigo
+                Nombre de la empresa
               </strong>
               <span style="color:red;">
                 *
               </span>
             </label>
-            <input class="form-control" min="1" name="codigo" placeholder="Digite el codigo aqui..." type="number"/>
+            <input class="form-control" min="1" name="nombrempresa" placeholder="Digite el nombre aqui..." type="text"/>
           </div>
         </div>
         <div class="form-row">
           <div class="col-sm">
             <label class="texto-mediano">
               <strong>
-                Nombre del hotel
+                Nombre del conductor
               </strong> 
               <span style="color:red;">
                 *
@@ -54,18 +54,6 @@
             <input class="form-control" name="Telefono" placeholder="Digite el telefono aqui..." type="text"/>
             <br/>
           </div>
-            <div class="col-sm">
-              <label class="texto-mediano">
-                <strong>
-                  Direccion
-                </strong>
-                <span style="color:red;">
-                  *
-                </span>
-              </label>
-              <input class="form-control" name="direccion" placeholder="Digite la direccion aqui..." type="text"/>
-              <br/>
-            </div>
           <div class="col-sm">
             <label class="texto-mediano">
               <strong>
@@ -93,9 +81,9 @@
         </div>
         <br/>
       </div>
-      <div class="respuestaRegistroHotel" id="resultRegistrarProveedor"></div>
+      <div class="respuestaRegistroTransporte"></div>
       <div class="text-center">
-        <input id="btnEnviarHotel" name="btnEnviarHotel" class="btn btn-warning boton-mediano" style="border: 1px solid #000;" type="submit" value=" Registrar ">
+        <input id="btnEnviarTransporte" name="btnEnviarTransporte" class="btn btn-warning boton-mediano" style="border: 1px solid #000;" type="submit" value=" Registrar ">
         </input>
       </div>
     </form>
@@ -105,8 +93,8 @@
 <br/>
 <script>
   $(document).ready(function () {
-      $("#formularioRegistroHotel").bind("submit",function(){
-          var btnEnviar = $("#btnEnviarHotel");
+      $("#formularioRegistroTransporte").bind("submit",function(){
+          var btnEnviar = $("#btnEnviarTransporte");
           $.ajax({
               type: $(this).attr("method"),
               url: $(this).attr("action"),
@@ -120,7 +108,7 @@
                   btnEnviar.removeAttr("disabled");
               },
               success: function(data){
-                  $(".respuestaRegistroHotel").html(data);
+                  $(".respuestaRegistroTransporte").html(data);
               },
               error: function(data){
                   alert("Problemas al tratar de enviar el formulario");
