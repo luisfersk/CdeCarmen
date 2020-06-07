@@ -17,4 +17,3 @@ $conn = conectarse();
 $personaNaturalService = new PersonaNaturalService($conn);
 
 $personaNaturalService->addPersonaNatural($PersonaNatural);
-

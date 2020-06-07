@@ -18,33 +18,7 @@
           <div class="col-sm">
             <label class="texto-mediano">
               <strong>
-                Email
-              </strong>
-              <span style="color:red;">
-                *
-              </span>
-            </label>
-            <input class="form-control" name="email" placeholder="Digite email aqui..." type="email"/>
-            <br/>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-sm">
-            <label class="texto-mediano">
-              <strong>
-                Celular
-              </strong>
-              <span style="color:red;">
-                *
-              </span>
-            </label>
-            <input class="form-control" name="celular" placeholder="Digite el celular aqui..." type="number"/>
-            <br/>
-          </div>
-          <div class="col-sm">
-            <label class="texto-mediano">
-              <strong>
-                Lugar
+                Destino
               </strong>
               <span style="color:red;">
                 *
@@ -58,42 +32,219 @@
           <div class="col-sm">
             <label class="texto-mediano">
               <strong>
-                Fecha
+                Noches de Alojamiento
               </strong>
               <span style="color:red;">
                 *
               </span>
             </label>
-            <input aria-describedby="emailHelp" class="form-control" name="fecha"  type="date"/>
+            <input class="form-control" name="email" placeholder="Digite aqui..." type="number"/>
             <br/>
           </div>
           <div class="col-sm">
             <label class="texto-mediano">
               <strong>
-                Disponibilidad
+                Tipo de Acomodacion
               </strong>
               <span style="color:red;">
                 *
               </span>
             </label>
             <select class="form-control" name="disponibilidad">
-              <option>BARRANQUILLA</option>
-              <option>BOGOTA</option>
-              <option>CESAR</option>
+              <option>SENCILLA</option>
+              <option>INDIVIDUAL</option>
+              <option>MULTIPLE</option>
             </select>
             <br/>
           </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Tipo de Hotel
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>SENCILLO</option>
+              <option>3 ESTRELLAS</option>
+              <option>4 ESTRELLAS</option>
+              <option>5 ESTRELLAS</option>
+            </select>
+            <br/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Transporte
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>TERRESTRE</option>
+              <option>AEREO</option>
+              <option>TRASLADOS INTERNOS</option>
+              <option>TODO</option>
+            </select>
+            <br/>
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Plan Alimentacion
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>DESAYUNO</option>
+              <option>ALMUERZO</option>
+              <option>CENA</option>
+              <option>TODO</option>
+            </select>
+            <br/>
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Refrigerios
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>MAÑANA</option>
+              <option>TARDE</option>
+              <option>NOCHE</option>
+              <option>TODO</option>
+            </select>
+            <br/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Acompañamiento de guia
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>SI</option>
+              <option>NO</option>
+            </select>
+            <br/>
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Organizacion de agenda
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>SI</option>
+              <option>NO</option>
+            </select>
+            <br/>
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Seguros de viaje
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>SI</option>
+              <option>NO</option>
+            </select>
+            <br/>
+          </div>
+        </div>
+          <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Visitas tecnicas
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>SI</option>
+              <option>NO</option>
+            </select>
+            <br/>
+          </div>
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Costos Museos o sitios emblematicos
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <select class="form-control" name="disponibilidad">
+              <option>SI</option>
+              <option>NO</option>
+            </select>
+            <br/>
+          </div>
+          <div class="col-sm">
+          <label class="texto-mediano">
+            <strong>
+              Plan de pago
+            </strong>
+            <span style="color:red;">
+              *
+            </span>
+          </label>
+          <select class="form-control" name="disponibilidad">
+            <option>Cuotas</option>
+            <option>Contado</option>
+          </select>
+          <br/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm">
+            <label class="texto-mediano">
+              <strong>
+                Observación
+              </strong>
+              <span style="color:red;">
+                *
+              </span>
+            </label>
+            <input class="form-control" name="Observacion" placeholder="Observe aqui..." type="text"/>
+            <br/>
+          </div> 
         </div>
         <br/>
       </div>
       <div class="respuestaRegistroMovilidad"></div>
       <div class="text-center">
-        <input id="btnEnviarMovildad" name="btnEnviarMovildad" class="btn btn-warning boton-mediano" style="border: 1px solid #000;" type="submit" value=" Registrar convenio">
+        <input id="btnEnviarMovildad" name="btnEnviarMovildad" class="btn btn-warning boton-mediano" style="border: 1px solid #000;" type="submit" value=" Registrar ">
         </input>
       </div>
     </form>
   </div>
 </div>
-
 <br/>
 <script src="registrarMovilidad.js"></script>

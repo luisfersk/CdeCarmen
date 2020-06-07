@@ -2,19 +2,18 @@
 
 require_once '../proveedor.php';
 
-$Proveedor = new Proveedor();
+$proveedor = new Proveedor();
 
-$Proveedor->primerNombre = $_POST['primerNombre'];
-$Proveedor->segundoNombre = $_POST['segundoNombre'];
-$Proveedor->primerApellido = $_POST['primerApellido'];
-$Proveedor->segundoApellido = $_POST['segundoApellido'];
-$Proveedor->tipoIdentificacion = $_POST['tipoIdentificacion'];
-$Proveedor->identificacion = $_POST['identificacion'];
-$Proveedor->disponibilidad = $_POST['disponibilidad'];
-$Proveedor->cantidad = $_POST['cantidad'];
+$proveedor->tipoIdentificacion = $_POST['tipoIdentificacion'];
+$proveedor->identificacion = $_POST['identificacion'];
+$proveedor->nombre = $_POST['nombre'];
+$proveedor->telefono = $_POST['telefono'];
+$proveedor->lugar = $_POST['lugar'];
+$proveedor->direccion = $_POST['direccion'];
+$proveedor->nota = $_POST['nota'];
 
 $conn = conectarse();
 
 $proveedorService = new ProveedorService($conn);
 
-$proveedorService->addProveedor($Proveedor);
+$proveedorService->addProveedor($proveedor);
