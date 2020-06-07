@@ -1,8 +1,13 @@
-<script src="registrarProveedor.js"></script>
-<br/>
+<script src="pages/proveedor/registrarProveedor/registrarProveedor.js"></script>
+<br />
 <div class="container">
   <div id="formulario-contenerdor">
-    <form id="formularioRegistroProveedor" method="post" name="test" action="pages/proveedor/registrarProveedor/registrarProveedor.php">
+    <form 
+      id="formularioRegistroProveedor" 
+      method="post" 
+      name="test" 
+      action="pages/proveedor/registrarProveedor/registrarProveedor.php"
+    >
       <div class="form-group">
         <div class="form-row">
           <div class="col-sm">
@@ -29,7 +34,8 @@
                 *
               </span>
             </label>
-            <input class="form-control" min="1" name="identificacion" placeholder="Digite su identifiacion aqui..." type="number"/>
+            <input class="form-control" min="1" name="identificacion" placeholder="Digite su identifiacion aqui..."
+              type="number" />
           </div>
         </div>
         <div class="form-row">
@@ -42,38 +48,38 @@
                 *
               </span>
             </label>
-            <input class="form-control" name="nombre" placeholder="Digite el nombre aqui..." type="text"/>
-            <br/>
+            <input class="form-control" name="nombre" placeholder="Digite el nombre aqui..." type="text" />
+            <br />
           </div>
           <div class="col-sm">
             <label class="texto-mediano">
               <strong>
-              Telefono
+                Telefono
               </strong>
             </label>
-            <input class="form-control" name="telefono" placeholder="Digite telefono aqui..." type="number"/>
-            <br/>
+            <input class="form-control" name="telefono" placeholder="Digite telefono aqui..." type="number" />
+            <br />
           </div>
           <div class="col-sm">
             <label class="texto-mediano">
               <strong>
-              Direccion
+                Direccion
               </strong>
             </label>
-            <input class="form-control" name="direccion" placeholder="Digite direccion aqui..." type="text"/>
-            <br/>
+            <input class="form-control" name="direccion" placeholder="Digite direccion aqui..." type="text" />
+            <br />
           </div>
           <div class="col-sm">
             <label class="texto-mediano">
               <strong>
-                Lugar
+                Lugar de recidencia
               </strong>
               <span style="color:red;">
                 *
               </span>
             </label>
-            <input class="form-control" name="lugar" placeholder="Digite el lugar aqui..." type="text"/>
-            <br/>
+            <input class="form-control" name="lugarRecidencia" placeholder="Digite el lugar aqui..." type="text" />
+            <br />
           </div>
         </div>
         <div class="col-sm">
@@ -85,19 +91,19 @@
               *
             </span>
           </label>
-          <input class="form-control" name="NOTA" placeholder="Descripcion aqui..." type="text"/>
-          <br/>
+          <input class="form-control" name="nota" placeholder="Descripcion aqui..." type="text" />
+          <br />
         </div>
-        <br/>
+        <br />
       </div>
       <div class="respuesta" id="resultRegistrarProveedor"></div>
       <div class="text-center">
-        <input id="btnEnviar" name="btnEnviarProveedor" class="btn btn-warning boton-mediano" style="border: 1px solid #000;" type="submit" value=" Registrar proveedor">
+        <input id="btnEnviar" name="btnEnviarProveedor" class="btn btn-warning boton-mediano"
+          style="border: 1px solid #000;" type="submit" value=" Registrar proveedor">
         </input>
       </div>
     </form>
   </div>
 </div>
-<br/>
+<br />
 Escribe un mensaje...
-

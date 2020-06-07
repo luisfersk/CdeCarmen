@@ -8,5 +8,7 @@ class Empresa
   public $servicio;
   public $lugar;
 
-  public function __construct() { }
+  public function __construct()
+  {
+  }
 }

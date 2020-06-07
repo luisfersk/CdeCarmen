@@ -6,5 +6,7 @@ class Convenio
   public $nombre_convenio;
   public $fecha;
 
-  public function __construct() { }
+  public function __construct()
+  {
+  }
 }

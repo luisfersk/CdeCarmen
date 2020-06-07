@@ -9,5 +9,7 @@ class PersonaNatural
   public $email;
   public $telefono;
 
-  public function __construct() { }
+  public function __construct()
+  {
+  }
 }

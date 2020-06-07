@@ -1,17 +1,15 @@
 <?php
-class Proveedor 
+class Proveedor
 {
     public $identificacion;
-    public $primerNombre;
-    public $segundoNombre;
-    public $primerApellido;
-    public $segundoApellido;
+    public $nombre;
     public $tipoIdentificacion;
-    public $disponibilidad;
-    public $cantidad;
+    public $telefono;
+    public $direcicon;
+    public $lugarRecidencia;
+    public $nota;
 
-    public function __construct() { }
+    public function __construct()
+    {
+    }
 }
-
-
-?>

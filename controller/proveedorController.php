@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  */
@@ -13,7 +14,23 @@ class ProveedorController
 
     public function addProveedor(Proveedor $proveedor)
     {
-        $sql = "INSERT INTO proveedor(identificacion,nombre, segundoNombre, primerApellido, segundoApellido, tipoIdentificacion, disponibilidad, cantidad) VALUES ('$proveedor->identificacion','$proveedor->primerNombre','$proveedor->segundoNombre','$proveedor->primerApellido','$proveedor->segundoApellido','$proveedor->tipoIdentificacion','$proveedor->disponibilidad','$proveedor->cantidad')";
+        $sql = "
+        INSERT INTO proveedor (
+            identificacion,
+            nombre,
+            tipoIdentificacion,
+            telefono,
+            lugar_recidencia,
+            nota
+        )
+        VALUES (
+            '$proveedor->identificacion',
+            '$proveedor->nombre',
+            '$proveedor->tipoIdentificacion',
+            '$proveedor->telefono',
+            '$proveedor->lugarRecidencia',
+            '$proveedor->nota'
+        )";
         return mysqli_query($this->conn, $sql);
     }
 }

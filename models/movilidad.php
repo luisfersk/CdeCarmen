@@ -18,8 +18,9 @@ class Movilidad
   public $planPagos;
   public $observaciones;
 
-  public function __construct() { }
-
+  public function __construct()
+  {
+  }
 }
 
 class PlanAlimentacion
@@ -29,7 +30,9 @@ class PlanAlimentacion
   public $numberCena;
   public $numberRefrigerio;
 
-  public function __construct() { }
+  public function __construct()
+  {
+  }
 }
 
 class Reservacion
