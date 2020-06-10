@@ -1,0 +1,17 @@
+<link href="pages/login/login.css" rel="stylesheet" type="text/css" />
+<!--<script src="pages/login/login.js"></script>-->
+<div class="login-box bg-dark">
+  <img src="img/logo.png" class="avatar" alt="Avatar Image">
+  <h1>Iniciar</h1>
+  <form id="formularioLogin" method="post" action="pages/login/login.php">
+    <!-- USERNAME INPUT -->
+    <label for="username">Correo</label>
+    <input name="username" type="text" placeholder="Enter email">
+    <!-- PASSWORD INPUT -->
+    <label for="password">Password</label>
+    <input  name="password" type="password" placeholder="Enter Password">
+    <input class="btn btn-outline-primary" id="btnEnviar" name="btnEnviar" type="submit" value="Log In">
+    <div class="respuesta"></div>
+  </form>
+</div>
+

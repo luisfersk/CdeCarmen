@@ -1,6 +1,3 @@
-<?php
-$GLOBALS['opcion_actual'] = 'index';
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,8 +20,30 @@ $GLOBALS['opcion_actual'] = 'index';
 
 <body>
   <?php require 'pages/inicio/navbar/navbar.html'; ?>
-  <div id="resultado">
-    <?php require 'pages/inicio/inicio.html'; ?>
+  <div id="resultado" class="body">
+    <?php
+    session_start();
+    if (isset($_SESSION["identificacion"])) {
+      require_once 'service/usuarioService.php';
+      require_once 'controller/usuarioController.php';
+      require_once 'models/usuario.php';
+      require_once 'php/coneccion.php';
+
+      $conn = conectarse();
+      $usuarioService = new UsuarioService($conn);
+      $tipo = $usuarioService->getTipo($_SESSION["identificacion"]);
+
+      if ($tipo == 'admin') {
+        require_once 'pages/inicioControl/inicioControl.html';
+      }else{
+        require 'pages/inicio/inicio.html';
+      }
+    }else{
+      require 'pages/movilidad/saberMasMovilidad/saberMasMovilidad.html';
+    }
+    
+
+    ?>
   </div>
 </body>
 

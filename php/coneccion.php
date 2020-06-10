@@ -3,9 +3,9 @@
 function conectarse()
 {
   $servername = "127.0.0.1";
-  $dbname     = "mid_db";
+  $dbname     = "mid";
   $username   = "root";
-  $password   = "Soka1212Fer";
+  $password   = "";
   $conn       = new mysqli($servername, $username, $password, $dbname);
 
   if ($conn->connect_error) {
