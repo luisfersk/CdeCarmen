@@ -14,14 +14,14 @@ class UsuarioController
 
   public function getUsuarioPassword($correo, $password)
   {
-    $sql = "SELECT identificacion, nombreCompleto, correo FROM usuario WHEN correo='$correo' AND password='$password'";
+    $sql = "SELECT identificacion, nombre_completo, correo FROM usuario WHERE correo='$correo' AND pass='$password'";
     
     return mysqli_query($this->conn, $sql);
   }
 
   public function getTipo($identificacion)
   {
-    $sql ="SELECT tipo FROM usuario WHERE identificacion='$identificacion'";
+    $sql ="SELECT kind FROM usuario WHERE identificacion='$identificacion'";
 
     return mysqli_query($this->conn, $sql);
   }

@@ -2,15 +2,15 @@
 
 class tipoIdentificacionController 
 {
-  public $conn;
+  public static $conn;
 
   public function __construct(mysqli $conn) {
-    $this->conn = $conn;
+    self::$conn = $conn;
   }
 
   public function getAllTipoIdentificacion()
   {
     $sql = "SELECT (*)FROM tipo_identificacion";
-    return mysqli_query($this->conn, $sql);
+    return mysqli_query(self::$conn, $sql);
   }
 }

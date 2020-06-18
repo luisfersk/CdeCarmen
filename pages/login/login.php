@@ -1,12 +1,13 @@
 <?php
+
 $goSeed = "../../";
 
 require_once $goSeed.'service/usuarioService.php';
 require_once $goSeed.'controller/usuarioController.php';
 require_once $goSeed.'models/usuario.php';
-require_once $goSeed.'php/coneccion.php';
+require_once $goSeed.'php/database.php';
 
-$conn = conectarse();
+$conn = connect();
 
 $usuarioService = new UsuarioService($conn);
 

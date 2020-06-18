@@ -19,30 +19,31 @@
 </head>
 
 <body>
-  <?php require 'pages/inicio/navbar/navbar.html'; ?>
+
+  <?php
+  session_start();
+  require 'pages/inicio/navbar/navbar.html'; ?>
   <div id="resultado" class="body">
     <?php
-    session_start();
-    if (isset($_SESSION["identificacion"])) {
+    if (isset($_SESSION["identificacion"])) :
+
       require_once 'service/usuarioService.php';
       require_once 'controller/usuarioController.php';
       require_once 'models/usuario.php';
-      require_once 'php/coneccion.php';
+      require_once 'php/database.php';
 
-      $conn = conectarse();
+      $conn = connect();
       $usuarioService = new UsuarioService($conn);
       $tipo = $usuarioService->getTipo($_SESSION["identificacion"]);
 
-      if ($tipo == 'admin') {
+      if ($tipo = '1') :
         require_once 'pages/inicioControl/inicioControl.html';
-      }else{
-        require 'pages/inicio/inicio.html';
-      }
-    }else{
-      require 'pages/movilidad/saberMasMovilidad/saberMasMovilidad.html';
-    }
-    
-
+      else :
+        require_once 'pages/inicio/inicio.html';
+      endif;
+    else :
+      require_once 'pages/inicio/inicio.html';
+    endif;
     ?>
   </div>
 </body>
